@@ -31,7 +31,7 @@ import butterknife.OnClick;
  * 获取到数据并且通知视图改变
  */
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements MainView{
 
     @BindView(R.id.main_lv)
     ListView mLv;
@@ -59,19 +59,20 @@ public class MainActivity extends AppCompatActivity {
         new MainPresenter(this).loadData();
     }
 
-    //    progressbar 显示
+    @Override
     public void showPrb() {
         mPrb.setVisibility(View.VISIBLE);
         mLv.setVisibility(View.GONE);
     }
 
-    //    * progressbar 隐藏
+    @Override
     public void hidePrb() {
         mPrb.setVisibility(View.GONE);
         mLv.setVisibility(View.VISIBLE);
     }
-//    * setData 设置数据（改变listView，刷新）
-    public void setData(List<String> datas){
+
+    @Override
+    public void setData(List<String> datas) {
         adapter.addAll(datas);
         adapter.notifyDataSetChanged();
     }
