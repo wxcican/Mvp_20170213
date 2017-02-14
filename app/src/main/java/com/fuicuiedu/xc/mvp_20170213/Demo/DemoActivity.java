@@ -9,11 +9,7 @@ import com.fuicuiedu.xc.mvp_20170213.MyMvp.MyMvpActivity;
 public class DemoActivity extends MyMvpActivity<DemoPresenter,DemoView> implements DemoView{
 
     @Override
-    public DemoPresenter creatPresenter() {
-        return new DemoPresenter();//把业务类返回出去
-    }
-
-    public void aaa(){
-//        getPresenter().fdsafdas
+    public DemoPresenter createPresenter() {
+        return null;
     }
 }

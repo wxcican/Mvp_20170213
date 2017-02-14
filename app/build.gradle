@@ -29,4 +29,7 @@ dependencies {
 
     compile 'com.jakewharton:butterknife:8.4.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+
+    //mosby mvp库
+    compile 'com.hannesdorfmann.mosby:mvp:2.0.1'
 }

@@ -56,7 +56,8 @@ public class MainActivity extends AppCompatActivity implements MainView{
     public void onClick() {
         //业务方面
         //点击加载数据
-        new MainPresenter(this).loadData();
+        MainPresenter mainPresenter = new MainPresenter(this);
+        mainPresenter.loadData();
     }
 
     @Override
